@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int2Bin</title>
+
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <div class="content">
+
+        <h1>Int2Bin </h1>
+
+        <h2>Conversor de Inteiro para Binário </h2>
+
+        <form action="">
+            <p>Número Inteiro: </p>
+            <input type="text" name="val1" id="val1">
+
+            <p>Número Binário: </p>
+            <input type="text" name="result" id="result">
+            <input type="button" value="converter" onclick="converter();" name="">
+        </form>
+       
+
+    </div>
+    
+
+    <script>
+        function converter(){
+            let val1 = parseInt(document.getElementById("val1").value);
+            let result = document.getElementById("result");
+            
+            result.value = (val1 >>> 0).toString(2)
+
+            console.log(result);
+        }
+
+    </script>
+</body>
+</html>
